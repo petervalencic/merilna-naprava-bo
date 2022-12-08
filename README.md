@@ -1,15 +1,15 @@
 # merilna-naprava-bo
 Aplikacija za poizvedbo podatkov za merilno napravo
 
-# namestitev
+## namestitev
 ```npm install ```
 
 ```npm install nodemon```
 
 Datoteko .envSpremeni preimenuj v .env
 
-# zagon
+## zagon
 ```nodemon``` ali ```node index.js```
 
-# generiranje docker slike
+## generiranje docker slike
 ```npm run build-docker```
