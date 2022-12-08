@@ -1,2 +1,9 @@
 #Vrata na katerih posluša HTTP strežnik
 SERVER_PORT = 4000
+
+#Nastavitve baze podatkov
+DB_USER = ''
+DB_HOST = ''
+DB_DATABASE_NAME = ''
+DB_PASSWORD = ''
+DB_PORT = 5432
