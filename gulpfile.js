@@ -103,4 +103,4 @@ const build = gulp.series(
 
 gulp.task('build', build);
 gulp.task('default', build);
-gulp.task('clean', gulp.series('cleanDist'));
+gulp.task('clean', ()=> gulp.series('cleanDist'));

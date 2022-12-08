@@ -1,5 +1,5 @@
 # Uporabimo alpine distribucijo
-FROM node:12-alpine
+FROM node:18-alpine
 # Kopiramo source kodo
 COPY / ./
 # nastavimo timezone https://wiki.alpinelinux.org/wiki/Setting_the_timezone

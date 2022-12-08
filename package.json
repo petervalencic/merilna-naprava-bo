@@ -4,6 +4,8 @@
   "description": "sistem za branje in prikazovanje podatkov iz merilne naprave",
   "main": "index.js",
   "scripts": {
+    "build": "gulp build",
+    "build-docker": "npm run build && bash -c \"docker build --file ./Dockerfile --tag merilna-naprava:$npm_package_version --tag merilna-naprava:latest dist\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
