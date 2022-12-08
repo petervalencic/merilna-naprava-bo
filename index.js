@@ -29,7 +29,7 @@ app.get('/podatki',dbUtil.vrniTrenutnePodatke);
 app.listen(process.env.SERVER_PORT, () => {
   log.info(util.printBanner("APP Server"));
   log.info(
-    `Zagnan ${new Date().toISOString}, Strežnik posluša na vratih ${
+    `Strežnik posluša na vratih ${
       process.env.SERVER_PORT
     }`
   );
