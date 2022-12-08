@@ -1,0 +1,2 @@
+#Vrata na katerih posluša HTTP strežnik
+SERVER_PORT = 4000
