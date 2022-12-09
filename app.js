@@ -1,14 +1,14 @@
 "use strict";
-const FILENAME = "index.js";
+const FILENAME = "app.js";
 
 require("dotenv").config();
 const { log4js } = require("./lib/logger");
 const log = log4js.getLogger(FILENAME);
 const util = require("./lib/util");
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const express = require("express");
 const app = express();
-const dbUtil = require('./lib/dbutil');
+const dbUtil = require("./lib/dbutil");
 
 app.use(bodyParser.json());
 
@@ -18,20 +18,22 @@ app.use(
   })
 );
 
-app.get('/',(req,res) => {
-    res.send(`Pozdravljen uporabnik. To sporočilo je iz strežnika`);
+// Statične datoteke
+app.use(express.static("public"));
+
+//določimo mapo za prikaz strani in template engine
+app.set("views", "./views");
+app.set("view engine", "ejs");
+
+//Navigacija
+app.get("", (req, res) => {
+  res.render("index", { tekst: "Poljubni tekst" });
 });
 
-app.get('/podatki',dbUtil.vrniTrenutnePodatke); 
+app.get("/podatki", dbUtil.vrniTrenutnePodatke);
 
-
-//ustvarimo strežnik, ki posluša na določenih vratih
+//Ustvarimo strežnik, ki posluša na določenih vratih
 app.listen(process.env.SERVER_PORT, () => {
   log.info(util.printBanner("APP Server"));
-  log.info(
-    `Strežnik posluša na vratih ${
-      process.env.SERVER_PORT
-    }`
-  );
+  log.info(`Strežnik posluša na vratih ${process.env.SERVER_PORT}`);
 });
-
