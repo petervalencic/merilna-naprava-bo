@@ -9,7 +9,7 @@ Aplikacija (strežnik) za delo z dijaki pri razvoju merilne naprave. Aplikacija 
 Datoteko .envSpremeni preimenuj v .env ter ustrezno dopolni manjkajoče parametre. Po spremembi podatkov datoteko shrani.
 
 ## zagon
-```npm start`` ali ```nodemon``` ali ```node app.js```
+```npm start``` 
 
 ## generiranje docker slike
 ```npm run build-docker```
