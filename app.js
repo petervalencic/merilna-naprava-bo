@@ -18,14 +18,14 @@ app.use(
   })
 );
 
-// Statične datoteke
+//Statične datoteke
 app.use(express.static("public"));
 
-//določimo mapo za prikaz strani in template engine
+//Določimo mapo za prikaz strani in template engine
 app.set("views", "./views");
 app.set("view engine", "ejs");
 
-//Navigacija
+
 app.get("", (req, res) => {
   res.render("index", { tekst: "Poljubni tekst" });
 });
