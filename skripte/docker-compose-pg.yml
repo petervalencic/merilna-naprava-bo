@@ -18,6 +18,9 @@ services:
       - PGADMIN_LISTEN_PORT=5050
     ports:
       - "5050:5050"
+    volumes:
+      - pg-data:/var/lib/pgadmin
 volumes:
+  pg-data:
   db:
     driver: local
