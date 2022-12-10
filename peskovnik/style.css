@@ -1,0 +1,200 @@
+#product-overview {
+  background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("images/freedom.jpg") left 10% bottom 80% / cover no-repeat border-box,
+    #ff1b68;
+  width: 100vw;
+  height: 33vh;
+  position: relative;
+}
+
+#product-overview h1 {
+  color: white;
+  font-family: "Anton", sans-serif;
+  position: absolute;
+  bottom: 5%;
+  left: 1%;
+  font-size: 1.6rem;
+}
+
+.section-title {
+  color: #2ddf5c;
+  text-align: center;
+}
+
+.plan {
+  background-color: #d5ffdc;
+  text-align: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.plan-highlighted {
+  background: #19b84c;
+  color: white;
+}
+
+.plan_annotation {
+  background: white;
+  color: #19b84c;
+  padding: 0.5rem;
+  box-shadow: 0 7px 10px 1px rgba(31, 30, 30, 0.7);
+  border-radius: 3px;
+}
+
+.plan_title {
+  color: #0e4f1f;
+}
+
+.plan_price {
+  color: rgb(126, 123, 123);
+}
+
+.plan-highlighted .plan_title {
+  color: white;
+}
+
+.plan-highlighted .plan_price {
+  color: #0e4f1f;
+}
+
+.plan_features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan_features li {
+  margin: 0.5rem 0;
+}
+
+#key-features {
+  background: #ff1b68;
+}
+
+#key-features .section-title {
+  color: white;
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+.key-feature_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.key-feature_image {
+  background: #ffcede;
+  width: 128px;
+  height: 128px;
+  border: 2px solid #424242;
+  border-radius: 50%;
+  margin: auto;
+  padding: 1.2rem;
+}
+
+.key-feature_description {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.modal {
+  position: fixed;
+  display: none;
+  z-index: 200;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  background: white;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal__title {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+  text-align: center;
+}
+
+.modal__action {
+  border: 1px solid #0e4f1f;
+  background: #0e4f1f;
+  text-decoration: none;
+  color: white;
+  font: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+  background: #2ddf5c;
+  border-color: #2ddf5c;
+}
+
+.modal__action--negative {
+  background: red;
+  border-color: red;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+  background: #ff5454;
+  border-color: #ff5454;
+}
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+  #product-overview {
+    height: 40vh;
+    background-position: 20% 75%;
+  }
+
+  #product-overview h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 40rem) {
+  .plan_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    height: 28rem;
+    min-width: 13rem;
+    max-width: 25rem;
+  }
+
+  .plan-highlighted {
+    box-shadow: 0 7px 10px 1px rgba(31, 30, 30, 0.7);
+    height: 30rem;
+    z-index: 50;
+  }
+
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    max-width: 25rem;
+  }
+
+  .key-feature_list {
+    display: flex;
+    justify-content: center;
+  }
+}
